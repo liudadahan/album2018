@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5音乐相册-珠峰培训</title>
+
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- COMPUTED REM -->
+    <script>
+        ~ function () {
+            function computed() {
+                var HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 375,
+                    maxW = 750,
+                    ratio = deviceW / designW;
+                deviceW >= maxW ? ratio = maxW / designW : null;
+                HTML.style.fontSize = ratio * 100 + 'px';
+            }
+            computed();
+            window.addEventListener('resize', computed, false);
+        }();
+    </script>
+</head>
+
+<body>
+    <!-- MAIN存放所有内容：它最大宽度750 -->
+    <main class="mainBox">
+        <!-- SWIPER滑屏骨架（固定） -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- PAGE 1 -->
+                <div class="swiper-slide page1">
+                    <!-- 
+                        class='ani':想要让谁有动画  必加
+                     -->
+                    <img src="image/index_1.png" alt="" class='ani' swiper-animate-effect="bounceInRight"
+                        swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="image/index_2.png" alt="" class='ani' swiper-animate-effect="bounceInUp"
+                        swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="image/index_3.png" alt="" class='ani' swiper-animate-effect="fadeIn"
+                        swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                    <img src="image/index_4.png" alt="" class='ani' swiper-animate-effect="zoomIn"
+                        swiper-animate-duration="1s" swiper-animate-delay=".5s">
+                    <img src="image/index_5.png" alt="" class='ani' swiper-animate-effect="rotateInDownLeft"
+                        swiper-animate-duration="1s" swiper-animate-delay="1s">
+
+                </div>
+
+                <!-- PAGE 2 -->
+                <div class="swiper-slide page2">
+                    <img src="image/page2_2.png" alt="">
+                    <img src="image/page2_3.png" alt="" class='ani' swiper-animate-effect="bounceInUp"
+                        swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="image/page2_4.png" alt="">
+                    <img src="image/page2_5.png" alt="">
+                    <img src="image/page2_7.png" alt="">
+                    <img src="image/page2_8.png" alt="">
+                    <img src="image/page2_9.png" alt="">
+                    <div class="text" class='ani'>
+                        <p>劝君莫惜金缕衣</p>
+                        <p>劝君须惜少年时</p>
+                        <p>有花堪折直须折</p>
+                        <p>莫待无花空折枝</p>
+
+                    </div>
+                    <div class="photo">
+                        <!-- 可以把图片换成video -->
+                        <img src="image/person_1.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- PAGE 3 -->
+                <div class="swiper-slide page3">
+                    <img src="image/page3_1.png" alt="">
+                    <img src="image/page3_3.png" alt="">
+                    <div class="concat">
+                        <img src="image/zhou.png" alt="">
+                        <div class="text">
+                            <p>扫码领取</p>
+                            <p>课程视频</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 滑动提示小按钮 -->
+        <a href="javascript:;" class="previousTip"></a>
+        <!-- 音乐  通过控制有没有Move来控制播不播放-->
+        <a href="javascript:;" class="musicBox"></a>
+       <audio src="audio/remembrance_of_youth.m4a" autoplay loop preload="none" id="musicAudio"></audio>
+    </main>
+
+    <!-- IMPORT JS -->
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.3.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
